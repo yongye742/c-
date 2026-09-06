@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+    int school, extra, total;
+    int maxtotal = 8;
+    int day = 0;
+
+    for (int i = 1; i <= 7; i++) {
+        scanf("%d %d", &school, &extra);
+        total = school + extra;
+
+        if (total > maxtotal) {
+            maxtotal = total;
+            day = i;
+        }
+    }
+
+    printf("%d", day);
+    return 0;
+}
