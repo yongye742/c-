@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() 
+{	int b;
+	int hand=0;
+	int save=0;
+
+	for(int month=1;month<=12;month++){
+		scanf("%d",&b);
+		hand+=300;
+		if(hand<b){
+			printf("-%d",month);
+			return 0;
+		}
+		hand-=b;
+		save+=hand/100*100;
+		hand%=100;
+	}
+	printf("%d",hand+save*6/5);
+	return 0;
+} 
