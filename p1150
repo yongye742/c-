@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() 
+{	
+	int n=0;
+	int k=0;
+	scanf("%d %d",&n,&k);
+
+	int total=n;
+	int yandi=n;
+	while(yandi>=k){
+		int sum=yandi/k;
+		total+=sum;
+		yandi=yandi%k+sum;
+	}
+	printf("%d",total);
+	return 0;
+} 
