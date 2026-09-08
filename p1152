@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() 
+{	
+	int l,r;
+	int cnt=0;
+	scanf("%d %d",&l,&r);//输入左右边界
+    for(int i=l;i<=r;i++){
+		int m=i;
+		while(m>0){
+			if(m%10==2) cnt++;
+			m/=10;
+		}
+	}printf("%d",cnt);
+	return 0;
+} 
